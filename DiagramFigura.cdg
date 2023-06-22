@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="figura">
+  <ClassDiagramComponents>
+    <Class name="Figura" package="figura" visibility="public" xPosition="249.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getPerimetro" returnType="double" visibility="public"/>
+        <Method name="getArea" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Circulo" package="figura" visibility="public" xPosition="25.0" yPosition="163.0">
+      <Fields>
+        <Field name="radius" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="radius"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPerimetro" returnType="double" visibility="public"/>
+        <Method name="getArea" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Main" package="figura" visibility="public" xPosition="700.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Cuadrado" package="figura" visibility="public" xPosition="506.0" yPosition="322.0">
+      <Fields>
+        <Field name="lado" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="l"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPerimetro" returnType="double" visibility="public"/>
+        <Method name="getArea" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Rombo" package="figura" visibility="public" xPosition="219.0" yPosition="322.0">
+      <Fields>
+        <Field name="diagonalMayor" type="double" visibility="private"/>
+        <Field name="diagonalMenor" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="dM"/>
+          <Argument type="double" name="dMa"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPerimetro" returnType="double" visibility="public"/>
+        <Method name="getArea" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Rectangulo" package="figura" visibility="public" xPosition="700.0" yPosition="146.0">
+      <Fields>
+        <Field name="base" type="double" visibility="private"/>
+        <Field name="altura" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="base"/>
+          <Argument type="double" name="altura"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getArea" returnType="double" visibility="public"/>
+        <Method name="getPerimetro" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="figura.Rombo" target="figura.Figura"/>
+    <IsRelation name="is" source="figura.Circulo" target="figura.Figura"/>
+    <IsRelation name="is" source="figura.Cuadrado" target="figura.Figura"/>
+    <IsRelation name="is" source="figura.Rectangulo" target="figura.Figura"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

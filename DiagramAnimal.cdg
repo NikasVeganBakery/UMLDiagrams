@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="animal">
+  <ClassDiagramComponents>
+    <Class name="Gato" package="animal" visibility="public" xPosition="35.0" yPosition="330.0">
+      <Fields>
+        <Field name="pelaje" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="pelaje"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="tipoAlimentacion"/>
+          <Argument type="int" name="edad"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPelaje" returnType="String" visibility="public"/>
+        <Method name="setPelaje" returnType="void" visibility="public">
+          <Argument type="String" name="pelaje"/>
+        </Method>
+        <Method name="sonido" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Perro" package="animal" visibility="public" xPosition="522.0" yPosition="330.0">
+      <Fields>
+        <Field name="raza" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="raza"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="tipoAlimentacion"/>
+          <Argument type="int" name="edad"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRaza" returnType="String" visibility="public"/>
+        <Method name="setRaza" returnType="void" visibility="public">
+          <Argument type="String" name="raza"/>
+        </Method>
+        <Method name="sonido" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Animal" package="animal" visibility="public" xPosition="249.0" yPosition="6.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="tipoAlimentacion" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="tipoAlimentacion"/>
+          <Argument type="int" name="edad"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getTipoAlimentacion" returnType="String" visibility="public"/>
+        <Method name="setTipoAlimentacion" returnType="void" visibility="public">
+          <Argument type="String" name="tipoAlimentacion"/>
+        </Method>
+        <Method name="getEdad" returnType="int" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="int" name="edad"/>
+        </Method>
+        <Method name="sonido" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Main" package="animal" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Caballo" package="animal" visibility="public" xPosition="920.0" yPosition="134.0">
+      <Fields>
+        <Field name="pedigree" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="pedigree"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="tipoAlimentacion"/>
+          <Argument type="int" name="edad"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPedigree" returnType="String" visibility="public"/>
+        <Method name="setPedigree" returnType="void" visibility="public">
+          <Argument type="String" name="pedigree"/>
+        </Method>
+        <Method name="sonido" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="animal.Caballo" target="animal.Animal"/>
+    <IsRelation name="is" source="animal.Perro" target="animal.Animal"/>
+    <IsRelation name="is" source="animal.Gato" target="animal.Animal"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
