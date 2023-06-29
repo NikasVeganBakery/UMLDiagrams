@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="mihospital">
+  <ClassDiagramComponents>
+    <Class name="Persona" package="mihospital" visibility="public" xPosition="20.0" yPosition="3.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellidos"/>
+          <Argument type="String" name="direccion"/>
+          <Argument type="String" name="cp"/>
+          <Argument type="String" name="poblacion"/>
+          <Argument type="String" name="provincia"/>
+          <Argument type="String" name="telefono"/>
+          <Argument type="String" name="email"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="IntroducirDatosPersona" returnType="void" visibility="private"/>
+        <Method name="getDireccion" returnType="String" visibility="public"/>
+        <Method name="setDireccion" returnType="void" visibility="public">
+          <Argument type="String" name="direccion"/>
+        </Method>
+        <Method name="getCp" returnType="String" visibility="public"/>
+        <Method name="setCp" returnType="void" visibility="public">
+          <Argument type="String" name="cp"/>
+        </Method>
+        <Method name="getPoblacion" returnType="String" visibility="public"/>
+        <Method name="setPoblacion" returnType="void" visibility="public">
+          <Argument type="String" name="poblacion"/>
+        </Method>
+        <Method name="getProvincia" returnType="String" visibility="public"/>
+        <Method name="setProvincia" returnType="void" visibility="public">
+          <Argument type="String" name="provincia"/>
+        </Method>
+        <Method name="getTelefono" returnType="String" visibility="public"/>
+        <Method name="setTelefono" returnType="void" visibility="public">
+          <Argument type="String" name="telefono"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="getApellidos" returnType="String" visibility="public"/>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="setApellidos" returnType="void" visibility="public">
+          <Argument type="String" name="apellidos"/>
+        </Method>
+        <Method name="setEmail" returnType="void" visibility="public">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="VisualizarDatosPersona" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Paciente" package="mihospital" visibility="public" xPosition="20.0" yPosition="517.0">
+      <Fields>
+        <Field name="Id_paciente" type="int" visibility="package"/>
+        <Field name="ultimo" type="int" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellidos"/>
+          <Argument type="String" name="direccion"/>
+          <Argument type="String" name="cp"/>
+          <Argument type="String" name="poblacion"/>
+          <Argument type="String" name="provincia"/>
+          <Argument type="String" name="telefono"/>
+          <Argument type="String" name="email"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="IntroducirDatosPaciente" returnType="void" visibility="private"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="VisualizarDatosPaciente" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Fecha" package="mihospital" visibility="public" xPosition="1779.0" yPosition="354.0">
+      <Fields>
+        <Field name="dia" type="int" visibility="package"/>
+        <Field name="bisiesto" type="boolean" visibility="package"/>
+        <Field name="diaOk" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="dia"/>
+          <Argument type="int" name="mes"/>
+          <Argument type="int" name="anio"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="IntroducirFecha" returnType="void" visibility="private"/>
+        <Method name="separarfecha" returnType="boolean" visibility="public">
+          <Argument type="String" name="fecha"/>
+        </Method>
+        <Method name="esfechaok" returnType="boolean" visibility="public"/>
+        <Method name="esbisiesto" returnType="boolean" visibility="public"/>
+        <Method name="esaniook" returnType="boolean" visibility="public"/>
+        <Method name="esmesok" returnType="boolean" visibility="public"/>
+        <Method name="esdia31" returnType="boolean" visibility="public"/>
+        <Method name="esdiaok" returnType="boolean" visibility="public"/>
+        <Method name="getDia" returnType="int" visibility="public"/>
+        <Method name="setDia" returnType="void" visibility="public">
+          <Argument type="int" name="dia"/>
+        </Method>
+        <Method name="getMes" returnType="int" visibility="public"/>
+        <Method name="setMes" returnType="void" visibility="public">
+          <Argument type="int" name="mes"/>
+        </Method>
+        <Method name="getAnio" returnType="int" visibility="public"/>
+        <Method name="setAnio" returnType="void" visibility="public">
+          <Argument type="int" name="anio"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="VisualizarFecha" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Mihospital" package="mihospital" visibility="public" xPosition="1928.0" yPosition="3.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Menu" package="mihospital" visibility="public" xPosition="536.0" yPosition="752.0">
+      <Fields>
+        <Field name="sc" type="Scanner" visibility="public"/>
+        <Field name="opcion" type="int" visibility="private"/>
+        <Field name="espe" type="ArrayList&lt;Especialidad&gt;" visibility="package"/>
+        <Field name="med" type="ArrayList&lt;Medico&gt;" visibility="package"/>
+        <Field name="pac" type="ArrayList&lt;Paciente&gt;" visibility="package"/>
+        <Field name="hist" type="ArrayList&lt;Historial&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="VisualizarMenuPrincipal" returnType="void" visibility="public"/>
+        <Method name="VisualizarMenuEspecialidades" returnType="void" visibility="private"/>
+        <Method name="VisualizarMenuMedico" returnType="void" visibility="private"/>
+        <Method name="VisualizarMenuPacientes" returnType="void" visibility="private"/>
+        <Method name="VisualizarMenuHistorial" returnType="void" visibility="private"/>
+        <Method name="GestionMenu" returnType="void" visibility="private"/>
+        <Method name="GestionMenuEspecialidades" returnType="void" visibility="private"/>
+        <Method name="GestionMenuMedico" returnType="void" visibility="private"/>
+        <Method name="GestionMenuPacientes" returnType="void" visibility="private"/>
+        <Method name="GestionMenuHistorial" returnType="void" visibility="private"/>
+        <Method name="IntroducirEspecialidades" returnType="void" visibility="public"/>
+        <Method name="IntroducirMedico" returnType="void" visibility="public"/>
+        <Method name="IntroducirPaciente" returnType="void" visibility="public"/>
+        <Method name="IntroducirHistorial" returnType="void" visibility="public"/>
+        <Method name="VisualizarDatosEspecialidades" returnType="void" visibility="public"/>
+        <Method name="VisualizarDatosMedico" returnType="void" visibility="public"/>
+        <Method name="VisualizarDatosPaciente" returnType="void" visibility="public"/>
+        <Method name="VisualizarDatosHistorial" returnType="void" visibility="public"/>
+        <Method name="GuardarFicheroEspecialidad" returnType="void" visibility="public"/>
+        <Method name="GuardarFicheroMedico" returnType="void" visibility="public"/>
+        <Method name="GuardarFicheroPaciente" returnType="void" visibility="public"/>
+        <Method name="GuardarFicheroHistorial" returnType="void" visibility="public"/>
+        <Method name="LeerFicheroEspecialidad" returnType="void" visibility="public"/>
+        <Method name="LeerFicheroMedico" returnType="void" visibility="public"/>
+        <Method name="LeerFicheroPaciente" returnType="void" visibility="public"/>
+        <Method name="LeerFicheroHistorial" returnType="void" visibility="public"/>
+        <Method name="getOpcion" returnType="int" visibility="public"/>
+        <Method name="setOpcion" returnType="void" visibility="public">
+          <Argument type="int" name="opcion"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Especialidad" package="mihospital" visibility="public" xPosition="1154.0" yPosition="937.0">
+      <Fields>
+        <Field name="Id_especialidad" type="int" visibility="package"/>
+        <Field name="Nombre" type="String" visibility="package"/>
+        <Field name="Area" type="String" visibility="package"/>
+        <Field name="ultimo" type="int" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="Nombre"/>
+          <Argument type="String" name="Area"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="IntroducirDatosEspecialidad" returnType="void" visibility="private"/>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="Nombre"/>
+        </Method>
+        <Method name="getArea" returnType="String" visibility="public"/>
+        <Method name="setArea" returnType="void" visibility="public">
+          <Argument type="String" name="Area"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="VisualizarDatosEspecialidad" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Fichero" package="mihospital" visibility="public" xPosition="1154.0" yPosition="483.0">
+      <Fields>
+        <Field name="ficheroSalida" type="FileOutputStream" visibility="package"/>
+        <Field name="objetoSalida" type="ObjectOutputStream" visibility="package"/>
+        <Field name="ficheroEntrada" type="FileInputStream" visibility="package"/>
+        <Field name="objetoEntrada" type="ObjectInputStream" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="GuardarDatosEspecialidad" returnType="void" visibility="public">
+          <Argument type="String" name="nombreFichero"/>
+          <Argument type="ArrayList&lt;Especialidad&gt;" name="espe"/>
+        </Method>
+        <Method name="GuardarDatosPaciente" returnType="void" visibility="public">
+          <Argument type="String" name="nombreFichero"/>
+          <Argument type="ArrayList&lt;Paciente&gt;" name="pac"/>
+        </Method>
+        <Method name="GuardarDatosMedico" returnType="void" visibility="public">
+          <Argument type="String" name="nombreFichero"/>
+          <Argument type="ArrayList&lt;Medico&gt;" name="med"/>
+        </Method>
+        <Method name="LeerDatosEspecialidad" returnType="ArrayList&lt;Especialidad&gt;" visibility="public">
+          <Argument type="String" name="nombreFichero"/>
+        </Method>
+        <Method name="LeerDatosPaciente" returnType="ArrayList&lt;Paciente&gt;" visibility="public">
+          <Argument type="String" name="nombreFichero"/>
+        </Method>
+        <Method name="LeerDatosMedico" returnType="ArrayList&lt;Medico&gt;" visibility="public">
+          <Argument type="String" name="nombreFichero"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Medico" package="mihospital" visibility="public" xPosition="1014.0" yPosition="122.0">
+      <Fields>
+        <Field name="Id_medico" type="int" visibility="package"/>
+        <Field name="f_alta" type="Fecha" visibility="package"/>
+        <Field name="ultimo" type="int" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellidos"/>
+          <Argument type="String" name="direccion"/>
+          <Argument type="String" name="cp"/>
+          <Argument type="String" name="poblacion"/>
+          <Argument type="String" name="provincia"/>
+          <Argument type="String" name="telefono"/>
+          <Argument type="String" name="email"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="IntroducirDatosPaciente" returnType="void" visibility="private"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="VisualizarDatosMedico" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Historial" package="mihospital" visibility="public" xPosition="1757.0" yPosition="1075.0">
+      <Fields>
+        <Field name="id_historial" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="id_historial"/>
+          <Argument type="String" name="id_paciente"/>
+          <Argument type="String" name="fecha_ingreso"/>
+          <Argument type="String" name="fecha_fin_tratamiento"/>
+          <Argument type="String" name="observaciones"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="IntroducirDatosHistorial" returnType="void" visibility="private"/>
+        <Method name="getId_historial" returnType="String" visibility="public"/>
+        <Method name="setId_historial" returnType="void" visibility="public">
+          <Argument type="String" name="id_historial"/>
+        </Method>
+        <Method name="getId_paciente" returnType="String" visibility="public"/>
+        <Method name="setId_paciente" returnType="void" visibility="public">
+          <Argument type="String" name="id_paciente"/>
+        </Method>
+        <Method name="getFecha_ingreso" returnType="String" visibility="public"/>
+        <Method name="setFecha_ingreso" returnType="void" visibility="public">
+          <Argument type="String" name="fecha_ingreso"/>
+        </Method>
+        <Method name="getFecha_fin_tratamiento" returnType="String" visibility="public"/>
+        <Method name="setFecha_fin_tratamiento" returnType="void" visibility="public">
+          <Argument type="String" name="fecha_fin_tratamiento"/>
+        </Method>
+        <Method name="getObservaciones" returnType="String" visibility="public"/>
+        <Method name="setObservaciones" returnType="void" visibility="public">
+          <Argument type="String" name="observaciones"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="VisualizarDatosHistorial" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="mihospital.Paciente" target="mihospital.Persona"/>
+    <HasRelation name="med" source="mihospital.Menu" target="mihospital.Medico" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Medico&gt;"/>
+    <HasRelation name="espe" source="mihospital.Menu" target="mihospital.Especialidad" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Especialidad&gt;"/>
+    <HasRelation name="f_alta" source="mihospital.Medico" target="mihospital.Fecha" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="hist" source="mihospital.Menu" target="mihospital.Historial" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Historial&gt;"/>
+    <HasRelation name="pac" source="mihospital.Menu" target="mihospital.Paciente" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Paciente&gt;"/>
+    <UseRelation source="mihospital.Fichero" target="mihospital.Medico" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="mihospital.Fichero" target="mihospital.Paciente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="mihospital.Fichero" target="mihospital.Especialidad" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="mihospital.Medico" target="mihospital.Persona"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
